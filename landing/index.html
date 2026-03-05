@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenClaw Tools - 8 Essential Monitoring & Security Tools</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero {
+            text-align: center;
+            color: white;
+            padding: 4rem 0;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        .hero p {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: #10b981;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .install-box {
+            background: rgba(0,0,0,0.3);
+            border-radius: 8px;
+            padding: 1rem 1.5rem;
+            margin-top: 2rem;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 16px;
+            padding: 3rem;
+            margin-top: 2rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        
+        h2 {
+            color: #667eea;
+            margin: 2rem 0 1rem;
+            font-size: 1.8rem;
+        }
+        
+        h2:first-child {
+            margin-top: 0;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        
+        .tool-card {
+            background: #f8fafc;
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        
+        .tool-card:hover {
+            border-color: #667eea;
+            transform: translateY(-4px);
+        }
+        
+        .tool-card h3 {
+            color: #667eea;
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            font-family: monospace;
+        }
+        
+        .tool-card p {
+            font-size: 0.9rem;
+            color: #64748b;
+        }
+        
+        .features-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        
+        .features-list li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .features-list li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #10b981;
+            font-weight: bold;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 1.5rem;
+            border-radius: 8px;
+            overflow-x: auto;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85rem;
+            margin: 1rem 0;
+        }
+        
+        .code-block .comment {
+            color: #64748b;
+        }
+        
+        .code-block .prompt {
+            color: #10b981;
+        }
+        
+        .pricing {
+            text-align: center;
+            padding: 3rem;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 16px;
+            color: white;
+            margin-top: 2rem;
+        }
+        
+        .pricing .price {
+            font-size: 4rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+        
+        .pricing .price span {
+            font-size: 1.5rem;
+            opacity: 0.8;
+        }
+        
+        .footer {
+            text-align: center;
+            color: white;
+            opacity: 0.8;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+        
+        .footer a {
+            color: white;
+        }
+        
+        @media (max-width: 600px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .content {
+                padding: 1.5rem;
+            }
+            .pricing .price {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="hero">
+            <h1>🔧 OpenClaw Tools</h1>
+            <p>8 essential bash tools to monitor, secure, and optimize your OpenClaw AI deployment</p>
+            <a href="#pricing" class="cta-button">Get Access — $29</a>
+            <div class="install-box">curl -fsSL get.openclaw.tools | bash</div>
+        </div>
+        
+        <div class="content">
+            <h2>What You Get</h2>
+            <p>Stop guessing about your system's health. Get instant visibility into security threats, resource usage, and AI costs — all from the command line.</p>
+            
+            <div class="tools-grid">
+                <div class="tool-card">
+                    <h3>🔒 oct-security-audit</h3>
+                    <p>Full security audit with brute force detection and privilege escalation monitoring</p>
+                </div>
+                <div class="tool-card">
+                    <h3>⚡ oct-security-fast</h3>
+                    <p>30-second security health check for daily peace of mind</p>
+                </div>
+                <div class="tool-card">
+                    <h3>📊 oct-daily-audit</h3>
+                    <p>Comprehensive system report with optimization suggestions</p>
+                </div>
+                <div class="tool-card">
+                    <h3>📈 oct-monitor</h3>
+                    <p>Real-time system monitor with visual progress bars</p>
+                </div>
+                <div class="tool-card">
+                    <h3>💰 oct-cost-track</h3>
+                    <p>Track API costs by model and provider</p>
+                </div>
+                <div class="tool-card">
+                    <h3>📝 oct-token-track</h3>
+                    <p>Daily token usage with per-model breakdown</p>
+                </div>
+                <div class="tool-card">
+                    <h3>📑 oct-token-summary</h3>
+                    <p>Aggregate reports across any date range</p>
+                </div>
+                <div class="tool-card">
+                    <h3>🏥 oct-health-check</h3>
+                    <p>Complete system diagnostic with pass/warn/fail status</p>
+                </div>
+            </div>
+            
+            <h2>See It In Action</h2>
+            <div class="code-block">
+<span class="prompt">$</span> oct-health-check
+
+🏥 OpenClaw System Health Check
+===============================
+Date: 2025-03-05 14:30:00
+
+<span class="comment">💾 Memory Check</span>
+---------------
+✅ Memory OK (45%)
+
+<span class="comment">💿 Disk Check</span>
+-------------
+✅ Disk OK (32%)
+
+<span class="comment">⚡ CPU Load Check</span>
+----------------
+✅ Load OK
+
+<span class="comment">📋 Health Summary</span>
+-----------------
+✅ All systems healthy!
+            </div>
+            
+            <h2>Who It's For</h2>
+            <ul class="features-list">
+                <li><strong>OpenClaw users</strong> who want visibility into their AI usage</li>
+                <li><strong>Self-hosters</strong> running local models (Ollama, etc.)</li>
+                <li><strong>Homelab enthusiasts</strong> who monitor their own infrastructure</li>
+                <li><strong>Developers</strong> who want quick security checks without heavy SIEM tools</li>
+            </ul>
+            
+            <h2>Easy Install</h2>
+            <p>One command. No dependencies except <code>curl</code> and <code>jq</code>. Works on Linux, macOS, and WSL.</p>
+            <div class="code-block">curl -fsSL https://get.openclaw.tools | bash</div>
+            
+            <h2>What's Included</h2>
+            <ul class="features-list">
+                <li>8 production-ready bash tools</li>
+                <li>Common library for easy extension</li>
+                <li>Cron automation examples</li>
+                <li>Full documentation</li>
+                <li>MIT License — use it freely</li>
+                <li>GitHub repository access</li>
+            </ul>
+        </div>
+        
+        <div class="pricing" id="pricing">
+            <h2>Get OpenClaw Tools</h2>
+            <div class="price">$29<span>one-time</span></div>
+            <p>Instant download • Free updates • MIT License</p>
+            <a href="https://gumroad.com/l/openclaw-tools" class="cta-button">Buy Now on Gumroad</a>
+        </div>
+        
+        <div class="footer">
+            <p>Built by <a href="https://github.com/Fr0ddy79">Fred</a> • 
+            <a href="https://github.com/Fr0ddy79/openclaw-tools">GitHub</a> • 
+            <a href="https://github.com/Fr0ddy79/openclaw-tools/issues">Support</a></p>
+        </div>
+    </div>
+</body>
+</html>
